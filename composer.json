@@ -1,0 +1,22 @@
+{
+    "name": "modernkernel/yii2-theme-adminlte",
+    "description": "AdminLTE theme for Yii2",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"," adminlte"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Harry Tang",
+            "email": "harry@modernkernel.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-assets/admin-lte": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "modernkernel\\themeadminlte\\": ""
+        }
+    }
+}
