@@ -25,7 +25,7 @@ class AdminlteTheme extends Theme
     public $tileColor='#367FA9'; // Windows Phone
 
     public $skin = 'skin-blue'; // skin-blue, skin-blue-light, skin-yellow, skin-yellow-light, skin-green, skin-green-light, skin-purple, skin-purple-light, skin-red, skin-red-light, skin-black, skin-black-light
-    public $layout='fixed'; // fixed, sidebar-mini, sidebar-collapse, layout-boxed, layout-top-nav (Note: you cannot use both layout-boxed and fixed at the same time. Anything else can be mixed together)
+    public $layout='sidebar-mini'; // fixed, sidebar-mini, sidebar-collapse, layout-boxed, layout-top-nav (Note: you cannot use both layout-boxed and fixed at the same time. Anything else can be mixed together)
     public $options='hold-transition';
     public $bodyClass='';
 
@@ -34,6 +34,5 @@ class AdminlteTheme extends Theme
     {
         parent::init();
         $this->bodyClass=$this->options.' '.$this->skin.' '.$this->layout;
-
     }
 }
