@@ -17,7 +17,9 @@ class AdminlteAsset extends AssetBundle
         'css/AdminLTE.min.css',
     ];
     public $js = [
-        'js/app.min.js'
+        'js/app.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js',
+        //'https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
