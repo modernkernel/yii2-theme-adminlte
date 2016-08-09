@@ -4,6 +4,7 @@
 /* @var $content string */
 
 
+use backend\widgets\SideMenu;
 use common\web\MomentjsAsset;
 use common\widgets\Alert;
 use modernkernel\fontawesome\Icon;
@@ -13,7 +14,6 @@ use yii\widgets\Breadcrumbs;
 
 
 AdminlteAsset::register($this);
-//AppAsset::register($this);
 MomentjsAsset::register($this);
 
 $js = file_get_contents(__DIR__ . '/admin.min.js');
@@ -25,7 +25,7 @@ $this->registerJs($js);
 <?php $this->beginBody() ?>
 <div class="wrapper">
     <header class="main-header">
-        <a href="#" class="logo">
+        <a href="<?= Yii::$app->homeUrl ?>" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>A</b>LT</span>
             <!-- logo for regular state and mobile devices -->
@@ -60,7 +60,7 @@ $this->registerJs($js);
     <aside class="main-sidebar">
         <section class="sidebar">
             <ul class="sidebar-menu">
-                <li class="active"><a href="#"><?= Icon::widget(['icon' => 'link']) ?><span>Link</span></a></li>
+                <?= SideMenu::widget() ?>
             </ul>
         </section>
     </aside>
@@ -75,7 +75,10 @@ $this->registerJs($js);
             </h1>
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                //'homeLink'=>['label'=>'Admin', 'url'=>['/admin']],
+                'homeLink'=>[
+                    'label'=>Yii::t('app', 'AdminCP'),
+                    'url'=>Yii::$app->homeUrl
+                ]
             ]) ?>
         </section>
 

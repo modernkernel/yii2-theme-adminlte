@@ -3,11 +3,9 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use frontend\assets\AppAsset;
 use modernkernel\themeadminlte\AdminlteAsset;
 
 
-AppAsset::register($this);
 AdminlteAsset::register($this);
 
 
