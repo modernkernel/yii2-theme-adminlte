@@ -4,6 +4,7 @@
 /* @var $content string */
 
 
+use backend\assets\AppAsset;
 use backend\widgets\SideMenu;
 use common\plugins\moment\MomentAsset;
 use common\widgets\Alert;
@@ -15,6 +16,7 @@ use yii\widgets\Breadcrumbs;
 
 AdminlteAsset::register($this);
 MomentAsset::register($this);
+AppAsset::register($this);
 
 $js = file_get_contents(__DIR__ . '/admin.min.js');
 $this->registerJs($js);
