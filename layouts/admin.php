@@ -5,7 +5,7 @@
 
 
 use backend\widgets\SideMenu;
-use common\web\MomentjsAsset;
+use common\plugins\moment\MomentAsset;
 use common\widgets\Alert;
 use modernkernel\fontawesome\Icon;
 use modernkernel\themeadminlte\AdminlteAsset;
@@ -14,7 +14,7 @@ use yii\widgets\Breadcrumbs;
 
 
 AdminlteAsset::register($this);
-MomentjsAsset::register($this);
+MomentAsset::register($this);
 
 $js = file_get_contents(__DIR__ . '/admin.min.js');
 $this->registerJs($js);
