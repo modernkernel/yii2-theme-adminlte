@@ -5,6 +5,7 @@
 
 use common\widgets\Alert;
 use modernkernel\themeadminlte\AdminlteAsset;
+use yii\bootstrap\Nav;
 use yii\widgets\Breadcrumbs;
 
 AdminlteAsset::register($this);
@@ -30,11 +31,16 @@ AdminlteAsset::register($this);
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body no-padding">
-                                <ul class="nav nav-stacked">
-                                    <li class="active"><a href="<?= Yii::$app->urlManager->createUrl(['/account']) ?>"><?= Yii::t('app', 'Profile') ?></a></li>
-                                    <li><a href="<?= Yii::$app->urlManager->createUrl(['/account/email']) ?>"><?= Yii::t('app', 'Email') ?></a></li>
-                                    <li><a href="<?= Yii::$app->urlManager->createUrl(['/account/password']) ?>"><?= Yii::t('app', 'Password') ?></a></li>
-                                </ul>
+                                <?=
+                                Nav::widget([
+                                    'options' => ['class' => 'nav-stacked'],
+                                    'items' => [
+                                        ['label' => Yii::t('app','Profile'), 'url' => ['/account/index']],
+                                        ['label' => Yii::t('app','Email'), 'url' => ['/account/email']],
+                                        ['label' => Yii::t('app','Password'), 'url' => ['/account/password']],
+                                    ],
+                                ]);
+                                ?>
                             </div>
                             <!-- /.box-body -->
                         </div>
