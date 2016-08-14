@@ -27,7 +27,7 @@ $this->registerJs($js);
 <?php $this->beginBody() ?>
 <div class="wrapper">
     <header class="main-header">
-        <a href="<?= Yii::$app->homeUrl ?>" class="logo">
+        <a href="<?= Yii::$app->urlManagerFrontend->createUrl(['/site/index']) ?>" class="logo" target="_blank">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>A</b>LT</span>
             <!-- logo for regular state and mobile devices -->
