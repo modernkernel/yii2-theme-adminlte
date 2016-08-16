@@ -3,6 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use common\widgets\Alert;
 use modernkernel\themeadminlte\AdminlteAsset;
 
 
@@ -18,6 +19,7 @@ AdminlteAsset::register($this);
         <a href="<?= Yii::$app->homeUrl ?>"><?= Yii::$app->name ?></a>
     </div>
     <div class="login-box-body">
+        <?= Alert::widget() ?>
         <?= $content ?>
     </div>
 </div>
