@@ -38,6 +38,7 @@ AdminlteAsset::register($this);
                                         ['label' => Yii::t('app','Profile'), 'url' => ['/account/index']],
                                         ['label' => Yii::t('app','Email'), 'url' => ['/account/email']],
                                         ['label' => Yii::t('app','Password'), 'url' => ['/account/password']],
+                                        ['label' => Yii::t('app','Linked Accounts'), 'url' => ['/account/linked']],
                                     ],
                                 ]);
                                 ?>
@@ -45,7 +46,7 @@ AdminlteAsset::register($this);
                             <!-- /.box-body -->
                         </div>
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-9">
                         <?= $content ?>
                     </div>
                 </div>
