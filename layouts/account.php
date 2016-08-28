@@ -4,11 +4,13 @@
 /* @var $content string */
 
 use common\widgets\Alert;
+use frontend\assets\AppAsset;
 use modernkernel\themeadminlte\AdminlteAsset;
 use yii\bootstrap\Nav;
 use yii\widgets\Breadcrumbs;
 
 AdminlteAsset::register($this);
+AppAsset::register($this);
 ?>
 <?php $this->beginContent('@vendor/modernkernel/yii2-theme-adminlte/layouts/base.php'); ?>
 <body class="<?= Yii::$app->getView()->theme->bodyClass ?>">
@@ -39,6 +41,25 @@ AdminlteAsset::register($this);
                                         ['label' => Yii::t('app','Email'), 'url' => ['/account/email']],
                                         ['label' => Yii::t('app','Password'), 'url' => ['/account/password']],
                                         ['label' => Yii::t('app','Linked Accounts'), 'url' => ['/account/linked']],
+                                    ],
+                                ]);
+                                ?>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <h3 class="box-title"><?= Yii::t('app', 'Blog') ?></h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body no-padding">
+                                <?=
+                                Nav::widget([
+                                    'options' => ['class' => 'nav-stacked'],
+                                    'items' => [
+                                        ['label' => Yii::t('app','My Blog'), 'url' => ['/blog/manage']],
+                                        ['label' => Yii::t('app','Write'), 'url' => ['/blog/create']],
                                     ],
                                 ]);
                                 ?>

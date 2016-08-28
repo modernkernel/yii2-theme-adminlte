@@ -5,13 +5,16 @@
 
 
 use common\widgets\Alert;
+use frontend\assets\AppAsset;
 use frontend\widgets\Footer;
 use frontend\widgets\Header;
 use modernkernel\themeadminlte\AdminlteAsset;
+use yii\bootstrap\Html;
 use yii\widgets\Breadcrumbs;
 
 
 AdminlteAsset::register($this);
+AppAsset::register($this);
 
 
 ?>
@@ -22,10 +25,18 @@ AdminlteAsset::register($this);
     <?= Header::widget() ?>
     <div class="content-wrapper">
         <div class="container">
-            <section class="content-header">
+
+            <section class="content-header" style="padding: 10px 0">
+                <h1>
+                    <?= Html::encode($this->title) ?>
+                    <?php if(!empty($this->params['subtitle'])):?>
+                        <small><?= Html::encode($this->params['subtitle']) ?></small>
+                    <?php endif;?>
+                </h1>
                 <?= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : []]) ?>
             </section>
-            <section class="content no-padding">
+
+            <section class="content" style="padding: 10px 0">
                 <?= Alert::widget() ?>
                 <?= $content ?>
             </section>
