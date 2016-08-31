@@ -3,6 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use nirvana\jsonld\JsonLDHelper;
 use yii\helpers\Html;
 
 ?>
@@ -48,6 +49,7 @@ use yii\helpers\Html;
     <meta name="msapplication-TileColor" content="<?= Yii::$app->getView()->theme->tileColor ?>">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="<?= Yii::$app->getView()->theme->themeColor; ?>">
+    <?php JsonLDHelper::registerScripts(); ?>
 </head>
 <?= $content ?>
 </html>
