@@ -4,11 +4,11 @@
 /* @var $content string */
 
 use modernkernel\themeadminlte\AdminlteAsset;
-
+use nirvana\jsonld\JsonLDHelper;
 
 
 AdminlteAsset::register($this);
-
+JsonLDHelper::addBreadcrumbList();
 
 ?>
 <?php $this->beginContent('@vendor/modernkernel/yii2-theme-adminlte/layouts/base.php'); ?>

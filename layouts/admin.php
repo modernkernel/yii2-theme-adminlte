@@ -10,6 +10,7 @@ use common\plugins\moment\MomentAsset;
 use common\widgets\Alert;
 use modernkernel\fontawesome\Icon;
 use modernkernel\themeadminlte\AdminlteAsset;
+use nirvana\jsonld\JsonLDHelper;
 use yii\bootstrap\Html;
 use yii\widgets\Breadcrumbs;
 
@@ -17,6 +18,7 @@ use yii\widgets\Breadcrumbs;
 AdminlteAsset::register($this);
 MomentAsset::register($this);
 AppAsset::register($this);
+JsonLDHelper::addBreadcrumbList();
 
 $js = file_get_contents(__DIR__ . '/admin.min.js');
 $this->registerJs($js);

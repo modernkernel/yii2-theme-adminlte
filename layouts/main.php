@@ -9,18 +9,19 @@ use frontend\assets\AppAsset;
 use frontend\widgets\Footer;
 use frontend\widgets\Header;
 use modernkernel\themeadminlte\AdminlteAsset;
+use nirvana\jsonld\JsonLDHelper;
 use yii\bootstrap\Html;
 use yii\widgets\Breadcrumbs;
 
 
 AdminlteAsset::register($this);
 AppAsset::register($this);
-
-
+JsonLDHelper::addBreadcrumbList();
 ?>
 <?php $this->beginContent('@vendor/modernkernel/yii2-theme-adminlte/layouts/base.php'); ?>
 <body class="<?= Yii::$app->getView()->theme->bodyClass ?>">
 <?php $this->beginBody() ?>
+
 <div class="wrapper">
     <?= Header::widget() ?>
     <div class="content-wrapper">
