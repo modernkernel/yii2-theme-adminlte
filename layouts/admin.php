@@ -31,9 +31,13 @@ $this->registerJs($js);
     <header class="main-header">
         <a href="<?= Yii::$app->urlManagerFrontend->createUrl(['/site/index']) ?>" class="logo" target="_blank">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><?= Yii::$app->name ?></span>
+            <span class="logo-mini">
+                <img src="/images/logo-mini.svg" class="img-responsive" style="height: 40px; margin: 5px;" alt="<?= Yii::$app->name ?>" />
+            </span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><?= Yii::$app->name ?></span>
+            <span class="logo-lg">
+                <img src="/images/logo-lg.svg" class="img-responsive" style="height: 40px; margin-top: 5px;"  alt="<?= Yii::$app->name ?>" />
+            </span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
