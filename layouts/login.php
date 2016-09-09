@@ -17,7 +17,9 @@ JsonLDHelper::addBreadcrumbList();
 <?php $this->beginBody() ?>
 <div class="login-box">
     <div class="login-logo">
-        <a href="<?= Yii::$app->homeUrl ?>"><?= Yii::$app->name ?></a>
+        <a href="<?= Yii::$app->homeUrl ?>" title="<?= Yii::$app->name ?>">
+            <img src="/images/logo.png" class="img-responsive" style="max-width: 90px; margin: 5px auto;"  alt="<?= Yii::$app->name ?>" />
+        </a>
     </div>
     <div class="login-box-body">
         <?= Alert::widget() ?>
