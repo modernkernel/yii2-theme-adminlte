@@ -24,7 +24,7 @@ $js = file_get_contents(__DIR__ . '/admin.min.js');
 $this->registerJs($js);
 
 ?>
-<?php $this->beginContent('@vendor/modernkernel/yii2-theme-adminlte/layouts/base.php'); ?>
+<?php $this->beginContent('@common/layouts/base.php'); ?>
 <body class="<?= Yii::$app->getView()->theme->bodyClass ?>">
 <?php $this->beginBody() ?>
 <div class="wrapper">

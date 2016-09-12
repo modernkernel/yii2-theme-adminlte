@@ -11,7 +11,7 @@ AdminlteAsset::register($this);
 JsonLDHelper::addBreadcrumbList();
 
 ?>
-<?php $this->beginContent('@vendor/modernkernel/yii2-theme-adminlte/layouts/base.php'); ?>
+<?php $this->beginContent('@common/layouts/base.php'); ?>
 <body class="layout-top-nav">
 <?php $this->beginBody() ?>
 <!-- Content Wrapper. Contains page content -->

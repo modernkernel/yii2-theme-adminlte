@@ -18,7 +18,7 @@ AdminlteAsset::register($this);
 AppAsset::register($this);
 JsonLDHelper::addBreadcrumbList();
 ?>
-<?php $this->beginContent('@vendor/modernkernel/yii2-theme-adminlte/layouts/base.php'); ?>
+<?php $this->beginContent('@common/layouts/base.php'); ?>
 <body class="<?= Yii::$app->getView()->theme->bodyClass ?>">
 <?php $this->beginBody() ?>
 
