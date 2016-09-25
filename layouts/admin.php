@@ -68,7 +68,10 @@ $this->registerJs($js);
     <aside class="main-sidebar">
         <section class="sidebar">
             <ul class="sidebar-menu">
-                <?= SideMenu::widget() ?>
+                <?= SideMenu::widget([
+                    'homeTitle'=>Yii::t('app', 'Admin CP'),
+                    'homeUrl'=>Yii::$app->homeUrl,
+                ]) ?>
             </ul>
         </section>
     </aside>
