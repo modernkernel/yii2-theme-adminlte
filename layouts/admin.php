@@ -5,7 +5,7 @@
 
 
 use backend\assets\AppAsset;
-use backend\widgets\SideMenu;
+use common\widgets\SideMenu;
 use common\plugins\moment\MomentAsset;
 use common\widgets\Alert;
 use modernkernel\fontawesome\Icon;

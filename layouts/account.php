@@ -3,7 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use backend\widgets\SideMenu;
+use common\widgets\SideMenu;
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
 use modernkernel\fontawesome\Icon;
