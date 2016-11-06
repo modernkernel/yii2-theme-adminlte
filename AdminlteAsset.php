@@ -36,8 +36,9 @@ class AdminlteAsset extends AssetBundle
             if (('_all-skins' !== $skin) && (strpos($skin, 'skin-') !== 0)) {
                 throw new Exception('Invalid skin specified');
             }
-
-            $this->css[] = sprintf('css/skins/%s.min.css', $skin);
+            if(file_exists($this->sourcePath.'/'.sprintf('css/skins/%s.min.css', $skin))){
+                $this->css[] = sprintf('css/skins/%s.min.css', $skin);
+            }
         }
         // fixed layout requires the slimscroll plugin!
         $layout = Yii::$app->view->theme->layout;

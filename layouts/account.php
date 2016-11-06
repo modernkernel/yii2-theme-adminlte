@@ -15,7 +15,7 @@ AppAsset::register($this);
 JsonLDHelper::addBreadcrumbList();
 ?>
 <?php $this->beginContent('@common/layouts/base.php'); ?>
-    <body class="layout-boxed hold-transition skin-blue">
+    <body class="hold-transition skin-blue sidebar-mini">
     <?php $this->beginBody() ?>
     <div class="wrapper">
         <header class="main-header">
