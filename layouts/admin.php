@@ -22,10 +22,10 @@ JsonLDHelper::addBreadcrumbList();
 
 $js = file_get_contents(__DIR__ . '/admin.min.js');
 $this->registerJs($js);
-
+$collapse=!empty(Yii::$app->session['sidebar-collapse'])?'sidebar-collapse':'';
 ?>
 <?php $this->beginContent('@common/layouts/base.php'); ?>
-<body class="<?= Yii::$app->getView()->theme->bodyClass ?>">
+<body class="<?= Yii::$app->getView()->theme->bodyClass ?> <?= $collapse ?>" data-toggle-url="<?= Yii::$app->urlManager->createUrl(['/site/toggle-sidebar']) ?>">
 <?php $this->beginBody() ?>
 <div class="wrapper">
     <header class="main-header">

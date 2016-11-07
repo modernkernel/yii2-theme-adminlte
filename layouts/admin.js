@@ -7,4 +7,11 @@ function serverTime() {
     timestamp += 1;
 }
 serverTime();
+$(".sidebar-toggle").on("click", function () {
+    $.ajax({
+        method: 'GET',
+        url: $("body").data("toggle-url"),
+        data: { classname: $("body").attr("class")}
+    })
+});
 
