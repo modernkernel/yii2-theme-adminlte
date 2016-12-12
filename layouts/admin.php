@@ -101,7 +101,7 @@ $collapse=!empty(Yii::$app->session['sidebar-collapse'])?'sidebar-collapse':'';
     </div>
 
     <footer class="main-footer">
-        <div class="pull-right hidden-xs">
+        <div class="pull-right hidden-xs no-print">
             <span class="server-time" data-timestamp="<?= time() ?>"></span>
         </div>
         <strong><?= Yii::t('app', 'Copyright') ?> &copy; <?= date('Y') ?> <?= Yii::$app->name ?>.</strong> <?= Yii::t('app', 'All rights reserved.') ?>
