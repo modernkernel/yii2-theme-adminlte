@@ -32,7 +32,7 @@ $collapse=!empty(Yii::$app->session['sidebar-collapse'])?'sidebar-collapse':'';
         <a href="<?= Yii::$app->urlManagerFrontend->createUrl(['/site/index']) ?>" class="logo" target="_blank">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini">
-                <img src="/images/logo-mini.svg" class="img-responsive" style="max-height: 20px; max-width: 20px; margin: 15px;" alt="<?= Yii::$app->name ?>" />
+                <img src="/images/logo-mini.svg" class="img-responsive" style="height: 30px; width: 30px; margin: 10px;" alt="<?= Yii::$app->name ?>" />
             </span>
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg text-center">
