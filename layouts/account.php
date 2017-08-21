@@ -15,7 +15,7 @@ AppAsset::register($this);
 JsonLDHelper::addBreadcrumbList();
 ?>
 <?php $this->beginContent('@common/layouts/base.php'); ?>
-    <body class="hold-transition skin-blue sidebar-mini">
+    <body class="hold-transition <?= empty(Yii::$app->getView()->theme->skin)?'skin-blue':Yii::$app->getView()->theme->skin ?> sidebar-mini">
     <?php $this->beginBody() ?>
     <div class="wrapper">
         <header class="main-header">
