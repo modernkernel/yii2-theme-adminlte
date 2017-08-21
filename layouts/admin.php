@@ -29,7 +29,7 @@ $collapse=!empty(Yii::$app->session['sidebar-collapse'])?'sidebar-collapse':'';
 <?php $this->beginBody() ?>
 <div class="wrapper">
     <header class="main-header">
-        <a href="<?= Yii::$app->urlManagerFrontend->createUrl(['/site/index']) ?>" class="logo" target="_blank">
+        <a href="<?= Yii::$app->urlManagerFrontend->createAbsoluteUrl(['site/index']) ?>" class="logo" target="_blank">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini">
                 <img src="/images/logo-mini.svg" class="img-responsive" style="height: 30px; width: 30px; margin: 10px;" alt="<?= Yii::$app->name ?>" />
@@ -49,7 +49,7 @@ $collapse=!empty(Yii::$app->session['sidebar-collapse'])?'sidebar-collapse':'';
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="<?= Yii::$app->urlManagerFrontend->createUrl(['/account']) ?>" target="_blank">
+                        <a href="<?= Yii::$app->urlManagerFrontend->createAbsoluteUrl(['/account']) ?>" target="_blank">
                             <?= Icon::widget(['icon' => 'user']) ?>
                             <span><?= Yii::$app->user->identity->fullname ?></span>
                         </a>
