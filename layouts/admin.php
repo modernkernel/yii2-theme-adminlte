@@ -48,6 +48,7 @@ $collapse=!empty(Yii::$app->session['sidebar-collapse'])?'sidebar-collapse':'';
             <!-- Navbar Right Menu -->
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
+                    <?php if(!Yii::$app->user->isGuest):?>
                     <li>
                         <a href="<?= Yii::$app->urlManagerFrontend->createAbsoluteUrl(['/account']) ?>" target="_blank">
                             <?= Icon::widget(['icon' => 'user']) ?>
@@ -60,6 +61,7 @@ $collapse=!empty(Yii::$app->session['sidebar-collapse'])?'sidebar-collapse':'';
                             <?= Icon::widget(['icon' => 'sign-out']) ?>
                         </a>
                     </li>
+                    <?php endif;?>
                 </ul>
             </div>
         </nav>
