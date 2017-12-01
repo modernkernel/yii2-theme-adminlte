@@ -1,6 +1,6 @@
 <?php
 
-namespace modernkernel\themeadminlte;
+namespace powerkernel\themeadminlte;
 
 use Exception;
 use Yii;
@@ -8,7 +8,7 @@ use yii\web\AssetBundle;
 
 /**
  * Class AdminlteAsset
- * @package modernkernel\themeadminlte
+ * @package powerkernel\themeadminlte
  */
 class AdminlteAsset extends AssetBundle
 {
