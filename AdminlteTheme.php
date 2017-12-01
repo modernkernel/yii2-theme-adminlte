@@ -5,19 +5,19 @@
  * @copyright Copyright (c) 2017 Power Kernel
  */
 
-namespace modernkernel\themeadminlte;
+namespace powerkernel\themeadminlte;
 
 
 use yii\base\Theme;
 
 /**
  * Class AdminlteTheme
- * @package modernkernel\themeadminlte
+ * @package powerkernel\themeadminlte
  */
 class AdminlteTheme extends Theme
 {
     public $pathMap = [
-        '@app/views' => '@vendor/modernkernel/yii2-theme-adminlte'
+        '@app/views' => '@vendor/powerkernel/yii2-theme-adminlte'
     ];
 
     public $themeColor='#367FA9'; // meta theme-color for android devices
