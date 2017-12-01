@@ -1,5 +1,5 @@
 {
-    "name": "modernkernel/yii2-theme-adminlte",
+    "name": "powerkernel/yii2-theme-adminlte",
     "description": "AdminLTE theme for Yii2",
     "type": "yii2-extension",
     "keywords": ["yii2","extension"," adminlte"],
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "modernkernel\\themeadminlte\\": ""
+            "powerkernel\\themeadminlte\\": ""
         }
     }
 }
