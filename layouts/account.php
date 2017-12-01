@@ -7,7 +7,7 @@ use common\widgets\SideMenu;
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
 use modernkernel\fontawesome\Icon;
-use modernkernel\themeadminlte\AdminlteAsset;
+use powerkernel\themeadminlte\AdminlteAsset;
 use nirvana\jsonld\JsonLDHelper;
 
 AdminlteAsset::register($this);

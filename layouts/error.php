@@ -3,7 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use modernkernel\themeadminlte\AdminlteAsset;
+use powerkernel\themeadminlte\AdminlteAsset;
 use nirvana\jsonld\JsonLDHelper;
 
 

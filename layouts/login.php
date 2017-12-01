@@ -4,7 +4,7 @@
 /* @var $content string */
 
 use common\widgets\Alert;
-use modernkernel\themeadminlte\AdminlteAsset;
+use powerkernel\themeadminlte\AdminlteAsset;
 use nirvana\jsonld\JsonLDHelper;
 
 

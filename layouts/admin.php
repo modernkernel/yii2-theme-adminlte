@@ -9,7 +9,7 @@ use common\widgets\SideMenu;
 use common\plugins\moment\MomentAsset;
 use common\widgets\Alert;
 use modernkernel\fontawesome\Icon;
-use modernkernel\themeadminlte\AdminlteAsset;
+use powerkernel\themeadminlte\AdminlteAsset;
 use nirvana\jsonld\JsonLDHelper;
 use yii\bootstrap\Html;
 use yii\widgets\Breadcrumbs;

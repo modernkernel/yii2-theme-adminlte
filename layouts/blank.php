@@ -4,14 +4,9 @@
 /* @var $content string */
 
 
-use common\widgets\Alert;
 use frontend\assets\AppAsset;
-use frontend\widgets\Footer;
-use frontend\widgets\Header;
-use modernkernel\themeadminlte\AdminlteAsset;
+use powerkernel\themeadminlte\AdminlteAsset;
 use nirvana\jsonld\JsonLDHelper;
-use yii\bootstrap\Html;
-use yii\widgets\Breadcrumbs;
 
 
 AdminlteAsset::register($this);
