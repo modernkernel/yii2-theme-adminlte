@@ -5,7 +5,7 @@
 /* @var $message string */
 /* @var $exception Exception */
 
-use modernkernel\fontawesome\Icon;
+use powerkernel\fontawesome\Icon;
 use yii\helpers\Html;
 
 $this->title = $name;
