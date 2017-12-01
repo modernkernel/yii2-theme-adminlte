@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist modernkernel/yii2-theme-adminlte "*"
+php composer.phar require --prefer-dist powerkernel/yii2-theme-adminlte "*"
 ```
 
 or add
 
 ```
-"modernkernel/yii2-theme-adminlte": "*"
+"powerkernel/yii2-theme-adminlte": "*"
 ```
 
 to the require section of your `composer.json` file.
