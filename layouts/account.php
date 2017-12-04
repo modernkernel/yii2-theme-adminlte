@@ -6,7 +6,7 @@
 use common\widgets\SideMenu;
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
-use modernkernel\fontawesome\Icon;
+use powerkernel\fontawesome\Icon;
 use powerkernel\themeadminlte\AdminlteAsset;
 use nirvana\jsonld\JsonLDHelper;
 

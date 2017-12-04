@@ -8,7 +8,7 @@ use backend\assets\AppAsset;
 use common\widgets\SideMenu;
 use common\plugins\moment\MomentAsset;
 use common\widgets\Alert;
-use modernkernel\fontawesome\Icon;
+use powerkernel\fontawesome\Icon;
 use powerkernel\themeadminlte\AdminlteAsset;
 use nirvana\jsonld\JsonLDHelper;
 use yii\bootstrap\Html;
