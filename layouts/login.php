@@ -11,6 +11,10 @@ use nirvana\jsonld\JsonLDHelper;
 AdminlteAsset::register($this);
 JsonLDHelper::addBreadcrumbList();
 
+$baseUrl = Yii::$app->request->baseUrl;
+$iconImageUrl = Yii::$app->params['iconImageUrl'];
+$url = empty($iconImageUrl) ? $baseUrl : $iconImageUrl;
+
 ?>
 <?php $this->beginContent('@common/layouts/base.php'); ?>
 <body class="hold-transition login-page">
@@ -18,7 +22,7 @@ JsonLDHelper::addBreadcrumbList();
 <div class="login-box">
     <div class="login-logo">
         <a href="<?= Yii::$app->homeUrl ?>" title="<?= Yii::$app->name ?>">
-            <img src="/images/banner.svg" class="img-responsive" style="max-width: 80%; max-height: 120px; margin: 5px auto;"  alt="<?= Yii::$app->name ?>" />
+            <img src="<?= $url ?>/images/banner.svg" class="img-responsive" style="max-width: 80%; max-height: 120px; margin: 5px auto;"  alt="<?= Yii::$app->name ?>" />
         </a>
     </div>
     <div class="login-box-body">

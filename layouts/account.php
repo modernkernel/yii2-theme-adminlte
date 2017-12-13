@@ -13,6 +13,11 @@ use nirvana\jsonld\JsonLDHelper;
 AdminlteAsset::register($this);
 AppAsset::register($this);
 JsonLDHelper::addBreadcrumbList();
+
+$baseUrl = Yii::$app->request->baseUrl;
+$iconImageUrl = Yii::$app->params['iconImageUrl'];
+$url = empty($iconImageUrl) ? $baseUrl : $iconImageUrl;
+
 ?>
 <?php $this->beginContent('@common/layouts/base.php'); ?>
     <body class="hold-transition <?= empty(Yii::$app->getView()->theme->skin)?'skin-blue':Yii::$app->getView()->theme->skin ?> sidebar-mini">
@@ -22,12 +27,12 @@ JsonLDHelper::addBreadcrumbList();
             <a href="<?= Yii::$app->urlManager->createUrl(['/site/index']) ?>" class="logo" target="_blank">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <span class="logo-mini">
-                <img src="/images/logo-mini.svg" class="img-responsive"
+                <img src="<?= $url ?>/images/logo-mini.svg" class="img-responsive"
                      style="height: 30px; width: 30px; margin: 10px;" alt="<?= Yii::$app->name ?>"/>
             </span>
                 <!-- logo for regular state and mobile devices -->
                 <span class="logo-lg text-center">
-                <img src="/images/logo-lg.svg" class="img-responsive"
+                <img src="<?= $url ?>/images/logo-lg.svg" class="img-responsive"
                      style="max-height: 20px; max-width: 200px; margin: 15px auto;" alt="<?= Yii::$app->name ?>"/>
             </span>
             </a>
