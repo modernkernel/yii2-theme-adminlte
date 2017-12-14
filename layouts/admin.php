@@ -25,8 +25,8 @@ $this->registerJs($js);
 $collapse=!empty(Yii::$app->session['sidebar-collapse'])?'sidebar-collapse':'';
 
 $baseUrl = Yii::$app->request->baseUrl;
-$iconImageUrl = Yii::$app->params['iconImageUrl'];
-$url = empty($iconImageUrl) ? $baseUrl : $iconImageUrl;
+$gitHubPage = Yii::$app->params['gitHubPage'];
+$url = empty($gitHubPage) ? $baseUrl : $gitHubPage;
 
 ?>
 <?php $this->beginContent('@common/layouts/base.php'); ?>
