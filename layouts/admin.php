@@ -24,9 +24,7 @@ $js = file_get_contents(__DIR__ . '/admin.min.js');
 $this->registerJs($js);
 $collapse=!empty(Yii::$app->session['sidebar-collapse'])?'sidebar-collapse':'';
 
-$baseUrl = Yii::$app->request->baseUrl;
-$gitHubPage = Yii::$app->params['gitHubPage'];
-$url = empty($gitHubPage) ? $baseUrl : $gitHubPage;
+$url = \common\Core::getStorageUrl();
 
 ?>
 <?php $this->beginContent('@common/layouts/base.php'); ?>
