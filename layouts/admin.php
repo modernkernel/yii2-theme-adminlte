@@ -24,9 +24,7 @@ $js = file_get_contents(__DIR__ . '/admin.min.js');
 $this->registerJs($js);
 $collapse=!empty(Yii::$app->session['sidebar-collapse'])?'sidebar-collapse':'';
 
-$baseUrl = Yii::$app->request->baseUrl;
-$gitHubPage = Yii::$app->params['gitHubPage'];
-$url = empty($gitHubPage) ? $baseUrl : $gitHubPage;
+$url = \common\Core::getStorageUrl();
 
 ?>
 <?php $this->beginContent('@common/layouts/base.php'); ?>
@@ -56,14 +54,14 @@ $url = empty($gitHubPage) ? $baseUrl : $gitHubPage;
                     <?php if(!Yii::$app->user->isGuest):?>
                     <li>
                         <a href="<?= Yii::$app->urlManagerFrontend->createAbsoluteUrl(['/account']) ?>" target="_blank">
-                            <?= Icon::widget(['icon' => 'user']) ?>
+                            <?= Icon::widget(['prefix'=>'fas', 'name' => 'user']) ?>
                             <span><?= Yii::$app->user->identity->fullname ?></span>
                         </a>
                     </li>
                     <li>
                         <a href="<?= Yii::$app->urlManager->createUrl(['/site/logout']) ?>">
                             <span><?= Yii::t('app', 'Logout') ?></span>
-                            <?= Icon::widget(['icon' => 'sign-out']) ?>
+                            <?= Icon::widget(['prefix'=>'fas', 'name' => 'sign-out']) ?>
                         </a>
                     </li>
                     <?php endif;?>

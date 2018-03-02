@@ -11,9 +11,7 @@ use nirvana\jsonld\JsonLDHelper;
 AdminlteAsset::register($this);
 JsonLDHelper::addBreadcrumbList();
 
-$baseUrl = Yii::$app->request->baseUrl;
-$gitHubPage = Yii::$app->params['gitHubPage'];
-$url = empty($gitHubPage) ? $baseUrl : $gitHubPage;
+$url = \common\Core::getStorageUrl();
 
 ?>
 <?php $this->beginContent('@common/layouts/base.php'); ?>
