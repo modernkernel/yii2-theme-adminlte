@@ -45,8 +45,9 @@ $url = \common\Core::getStorageUrl();
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <a href="#" class="sidebar-toggle no-content-before" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle navigation</span>
+                <?= Icon::widget(['name'=>'bars']) ?>
             </a>
             <!-- Navbar Right Menu -->
             <div class="navbar-custom-menu">
@@ -54,14 +55,14 @@ $url = \common\Core::getStorageUrl();
                     <?php if(!Yii::$app->user->isGuest):?>
                     <li>
                         <a href="<?= Yii::$app->urlManagerFrontend->createAbsoluteUrl(['/account']) ?>" target="_blank">
-                            <?= Icon::widget(['icon' => 'user']) ?>
+                            <?= Icon::widget(['name' => 'user']) ?>
                             <span><?= Yii::$app->user->identity->fullname ?></span>
                         </a>
                     </li>
                     <li>
                         <a href="<?= Yii::$app->urlManager->createUrl(['/site/logout']) ?>">
                             <span><?= Yii::t('app', 'Logout') ?></span>
-                            <?= Icon::widget(['icon' => 'sign-out']) ?>
+                            <?= Icon::widget(['name' => 'sign-out']) ?>
                         </a>
                     </li>
                     <?php endif;?>
