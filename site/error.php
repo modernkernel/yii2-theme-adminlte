@@ -35,7 +35,7 @@ $url = \common\Core::getStorageUrl();
 
                 <h1 class="headline text-<?= $color ?>"> <?= $exception->statusCode ?></h1>
                 <div class="error-content">
-                    <h3><?= Icon::widget(['icon' => 'warning text-' . $color]) ?> <?= nl2br(Html::encode($message)) ?></h3>
+                    <h3><?= Icon::widget(['name' => 'exclamation-triangle', 'options' => ['class' => 'text-' . $color]]) ?> <?= nl2br(Html::encode($message)) ?></h3>
 
                     <p>
                         <?= Yii::t('app', 'The above error occurred while the Web server was processing your request.') ?>
