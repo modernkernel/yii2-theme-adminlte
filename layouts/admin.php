@@ -32,14 +32,14 @@ $url = \common\Core::getStorageUrl();
 <?php $this->beginBody() ?>
 <div class="wrapper">
     <header class="main-header">
-        <a href="<?= Yii::$app->urlManagerFrontend->createAbsoluteUrl(['site/index']) ?>" class="logo" target="_blank">
+        <a href="<?= Yii::$app->urlManagerFrontend->createAbsoluteUrl(['site/index']) ?>" class="logo" target="_blank" style="padding: 0 10px">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini">
-                <img src="<?= $url ?>/images/logo-mini.svg" class="img-responsive" style="height: 30px; width: 30px; margin: 10px;" alt="<?= Yii::$app->name ?>" />
+            <span class="logo-mini text-center" style="margin: 0">
+                <?= \common\models\Setting::getValue('logoXs') ?>
             </span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg text-center">
-                <img src="<?= $url ?>/images/logo-lg.svg" class="img-responsive" style="max-height: 20px; max-width: 200px; margin: 15px auto;"  alt="<?= Yii::$app->name ?>" />
+            <span class="logo-lg text-center" style="padding: 10px">
+                <?= \common\models\Setting::getValue('logoLg') ?>
             </span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->

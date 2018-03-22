@@ -19,9 +19,13 @@ $url = \common\Core::getStorageUrl();
 <?php $this->beginBody() ?>
 <div class="login-box">
     <div class="login-logo">
-        <a href="<?= Yii::$app->homeUrl ?>" title="<?= Yii::$app->name ?>">
-            <img src="<?= $url ?>/images/banner.svg" class="img-responsive" style="max-width: 80%; max-height: 120px; margin: 5px auto;"  alt="<?= Yii::$app->name ?>" />
-        </a>
+        <div class="row">
+            <div class="col-xs-10 col-xs-push-1">
+                <a href="<?= Yii::$app->homeUrl ?>" title="<?= Yii::$app->name ?>">
+                    <?= \common\models\Setting::getValue('logoLogin') ?>
+                </a>
+            </div>
+        </div>
     </div>
     <div class="login-box-body">
         <?= Alert::widget() ?>

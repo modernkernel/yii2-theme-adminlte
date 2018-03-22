@@ -1,6 +1,7 @@
 <?php
 
 /* @var $this \yii\web\View */
+
 /* @var $content string */
 
 use common\widgets\SideMenu;
@@ -18,20 +19,18 @@ $url = \common\Core::getStorageUrl();
 
 ?>
 <?php $this->beginContent('@common/layouts/base.php'); ?>
-    <body class="hold-transition <?= empty(Yii::$app->getView()->theme->skin)?'skin-blue':Yii::$app->getView()->theme->skin ?> sidebar-mini">
+    <body class="hold-transition <?= empty(Yii::$app->getView()->theme->skin) ? 'skin-blue' : Yii::$app->getView()->theme->skin ?> sidebar-mini">
     <?php $this->beginBody() ?>
     <div class="wrapper">
         <header class="main-header">
             <a href="<?= Yii::$app->urlManager->createUrl(['/site/index']) ?>" class="logo" target="_blank">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini">
-                <img src="<?= $url ?>/images/logo-mini.svg" class="img-responsive"
-                     style="height: 30px; width: 30px; margin: 10px;" alt="<?= Yii::$app->name ?>"/>
-            </span>
+                <span class="logo-mini text-center" style="margin: 0">
+                <?= \common\models\Setting::getValue('logoXs') ?>
+                </span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg text-center">
-                <img src="<?= $url ?>/images/logo-lg.svg" class="img-responsive"
-                     style="max-height: 20px; max-width: 200px; margin: 15px auto;" alt="<?= Yii::$app->name ?>"/>
+                <span class="logo-lg text-center" style="padding: 10px">
+                <?= \common\models\Setting::getValue('logoLg') ?>
             </span>
             </a>
             <!-- Header Navbar: style can be found in header.less -->
@@ -83,7 +82,8 @@ $url = \common\Core::getStorageUrl();
             <div class="pull-right hidden-xs">
                 <span class="server-time" data-timestamp="<?= time() ?>"></span>
             </div>
-            <strong><?= Yii::t('app', 'Copyright') ?> &copy; <?= date('Y') ?> <?= Yii::$app->name ?>.</strong> <?= Yii::t('app', 'All rights reserved.') ?>
+            <strong><?= Yii::t('app', 'Copyright') ?> &copy; <?= date('Y') ?> <?= Yii::$app->name ?>
+                .</strong> <?= Yii::t('app', 'All rights reserved.') ?>
         </footer>
     </div>
     <?php $this->endBody() ?>
