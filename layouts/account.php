@@ -25,11 +25,11 @@ $url = \common\Core::getStorageUrl();
         <header class="main-header">
             <a href="<?= Yii::$app->urlManager->createUrl(['/site/index']) ?>" class="logo" target="_blank">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
-                <span class="logo-mini text-center" style="margin: 0">
+                <span class="logo-mini text-center">
                 <?= \common\models\Setting::getValue('logoXs') ?>
                 </span>
                 <!-- logo for regular state and mobile devices -->
-                <span class="logo-lg text-center" style="padding: 10px">
+                <span class="logo-lg text-center">
                 <?= \common\models\Setting::getValue('logoLg') ?>
             </span>
             </a>
