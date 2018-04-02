@@ -31,7 +31,7 @@ $url = \common\Core::getStorageUrl();
                 <!-- logo for regular state and mobile devices -->
                 <span class="logo-lg text-center">
                 <?= \common\models\Setting::getValue('logoLg') ?>
-            </span>
+                </span>
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
