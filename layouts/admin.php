@@ -10,7 +10,7 @@ use common\plugins\moment\MomentAsset;
 use common\widgets\Alert;
 use powerkernel\fontawesome\Icon;
 use powerkernel\themeadminlte\AdminlteAsset;
-use nirvana\jsonld\JsonLDHelper;
+use powerkernel\jsonld\JsonLDHelper;
 use yii\bootstrap\Html;
 use yii\widgets\Breadcrumbs;
 

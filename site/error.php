@@ -26,8 +26,7 @@ $url = \common\Core::getStorageUrl();
         <div class="col-xs-12">
             <div class="error-page">
                 <a href="<?= Yii::$app->homeUrl ?>" title="<?= Yii::$app->name ?>">
-                    <img src="<?= $url ?>/images/banner.svg" class="img-responsive"
-                         style="max-width: 80%; max-height: 60px; margin: 5px auto;" alt="<?= Yii::$app->name ?>"/>
+                    <?= \common\models\Setting::getValue('logoColorLg') ?>
                 </a>
                 <div>
                     <hr/>

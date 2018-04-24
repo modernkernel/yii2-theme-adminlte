@@ -9,7 +9,7 @@ use common\widgets\Alert;
 use frontend\assets\AppAsset;
 use powerkernel\fontawesome\Icon;
 use powerkernel\themeadminlte\AdminlteAsset;
-use nirvana\jsonld\JsonLDHelper;
+use powerkernel\jsonld\JsonLDHelper;
 
 AdminlteAsset::register($this);
 AppAsset::register($this);

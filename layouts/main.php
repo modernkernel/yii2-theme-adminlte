@@ -9,7 +9,7 @@ use frontend\assets\AppAsset;
 use frontend\widgets\Footer;
 use frontend\widgets\Header;
 use powerkernel\themeadminlte\AdminlteAsset;
-use nirvana\jsonld\JsonLDHelper;
+use powerkernel\jsonld\JsonLDHelper;
 use yii\bootstrap\Html;
 use yii\widgets\Breadcrumbs;
 
