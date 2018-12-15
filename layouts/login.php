@@ -20,7 +20,7 @@ $url = \common\Core::getStorageUrl();
 <div class="login-box">
     <div class="login-logo">
         <div class="row">
-            <div class="col-xs-10 col-xs-push-1">
+            <div class="col-xs-6 col-xs-push-3">
                 <a href="<?= Yii::$app->homeUrl ?>" title="<?= Yii::$app->name ?>">
                     <?= \common\models\Setting::getValue('logoLogin') ?>
                 </a>

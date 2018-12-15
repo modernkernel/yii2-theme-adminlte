@@ -36,7 +36,7 @@ $url = \common\Core::getStorageUrl();
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle no-content-before" data-toggle="offcanvas" role="button">
+            <a href="#" class="sidebar-toggle no-content-before" data-toggle="push-menu" role="button">
                 <span class="sr-only">Toggle navigation</span>
                 <?= Icon::widget(['name' => 'bars']) ?>
             </a>
@@ -62,7 +62,7 @@ $url = \common\Core::getStorageUrl();
 
     <aside class="main-sidebar">
         <section class="sidebar">
-            <ul class="sidebar-menu">
+            <ul class="sidebar-menu" data-widget="tree">
                 <?= SideMenu::widget([
                 ]) ?>
             </ul>

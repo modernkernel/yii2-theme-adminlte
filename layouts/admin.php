@@ -45,9 +45,9 @@ $url = \common\Core::getStorageUrl();
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle no-content-before" data-toggle="offcanvas" role="button">
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <?= Icon::widget(['name' => 'bars']) ?>
                 <span class="sr-only">Toggle navigation</span>
-
             </a>
             <!-- Navbar Right Menu -->
             <div class="navbar-custom-menu">
@@ -73,7 +73,7 @@ $url = \common\Core::getStorageUrl();
 
     <aside class="main-sidebar">
         <section class="sidebar">
-            <ul class="sidebar-menu">
+            <ul class="sidebar-menu" data-widget="tree">
                 <?= SideMenu::widget([
                     'homeTitle'=>Yii::t('app', 'Admin CP'),
                     'homeUrl'=>Yii::$app->homeUrl,
