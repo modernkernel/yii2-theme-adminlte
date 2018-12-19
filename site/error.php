@@ -14,7 +14,7 @@ $this->title = $name;
 $this->context->layout = 'error';
 
 $color = 'yellow';
-if ($exception->statusCode == 500) {
+if (isset($exception->statusCode) && $exception->statusCode == 500) {
     $color = 'red';
 }
 
@@ -32,7 +32,7 @@ $url = \common\Core::getStorageUrl();
                     <hr/>
                 </div>
 
-                <h1 class="headline text-<?= $color ?>"> <?= $exception->statusCode ?></h1>
+                <h1 class="headline text-<?= $color ?>"> <?= isset($exception->statusCode)?$exception->statusCode:500 ?></h1>
                 <div class="error-content">
                     <h3><?= Icon::widget(['name' => 'exclamation-triangle', 'options' => ['class' => 'text-' . $color]]) ?> <?= nl2br(Html::encode($message)) ?></h3>
 
@@ -66,14 +66,14 @@ $url = \common\Core::getStorageUrl();
                 <?php endif; ?>
 
                 <?php if (!empty(Yii::$app->request->referrer)): ?>
-                <div class="row" style="margin-top: 50px;">
-                    <div class="col-xs-12">
-                        <div class="text-center">
-                            <a href="<?= Yii::$app->request->referrer ?>"
-                               class="btn btn-primary"><?= Yii::t('app', 'Go Back') ?></a>
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-xs-12">
+                            <div class="text-center">
+                                <a href="<?= Yii::$app->request->referrer ?>"
+                                   class="btn btn-primary"><?= Yii::t('app', 'Go Back') ?></a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php endif; ?>
             </div>
         </div>
