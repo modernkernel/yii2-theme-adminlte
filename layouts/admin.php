@@ -32,7 +32,7 @@ $url = \common\Core::getStorageUrl();
 <?php $this->beginBody() ?>
 <div class="wrapper">
     <header class="main-header">
-        <a href="<?= Yii::$app->urlManagerFrontend->createAbsoluteUrl(['site/index']) ?>" class="logo" target="_blank" style="padding: 0 10px">
+        <a href="<?= Yii::$app->urlManagerFrontend->createAbsoluteUrl(['site/index']) ?>" class="logo" target="_blank">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini text-center">
                 <?= \common\models\Setting::getValue('logoXs') ?>
