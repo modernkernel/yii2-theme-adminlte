@@ -12,15 +12,16 @@ use yii\web\AssetBundle;
  */
 class AdminlteAsset extends AssetBundle
 {
+    const VERSION = '2.4.8';
     //public $sourcePath = '@vendor/almasaeed2010/adminlte/dist';
     public $css = [
         //'css/AdminLTE.min.css',
-        '//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.8/css/AdminLTE.min.css',
-        '//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.8/css/skins/_all-skins.css'
+        '//cdnjs.cloudflare.com/ajax/libs/admin-lte/'.self::VERSION.'/css/AdminLTE.min.css',
+        '//cdnjs.cloudflare.com/ajax/libs/admin-lte/'.self::VERSION.'/css/skins/_all-skins.css'
     ];
     public $js = [
         //'js/app.min.js',
-        '//cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.8/js/adminlte.min.js'
+        '//cdnjs.cloudflare.com/ajax/libs/admin-lte/'.self::VERSION.'/js/adminlte.min.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
